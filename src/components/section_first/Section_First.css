@@ -1,0 +1,71 @@
+
+.section_one_main_div {
+    background-color: rgb(37, 79, 26);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.section_one_left_div,
+.section_one_right_div {
+    width: 50%;
+    margin: 50px;
+}
+
+.section_one_left_div {
+    color: yellow;
+    text-align: justify;
+}
+
+.section_one_left_div h1 {
+    font-weight: 900;
+}
+
+
+.section_one_button_class {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section_one_button_class button {
+    margin-left: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: bisque;
+    border: none;
+}
+
+.section_one_button_class input {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    border: none;
+}
+
+.section_one_left_div h1,
+h6 {
+    padding-top: 10px;
+}
+
+
+.section_one_right_div {
+    width: 500px;
+    height: 468px;
+    background: url(../../assets/img1.png);
+    margin: 100px auto;
+    animation: slide 5s infinite;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    25% {
+        background: url(../../assets/img2.png);
+    }
+
+    50% {
+        background: url(../../assets/img3.png);
+    }
+}

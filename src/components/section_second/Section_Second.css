@@ -1,0 +1,71 @@
+
+.section_second_main_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(233, 192, 233);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+
+.section_second_left_div,
+.section_second_right_div {
+    width: 50%;
+    margin: 50px;
+}
+
+.section_second_left_div {
+    color: rgb(100, 12, 182);
+    text-align: justify;
+}
+
+.section_second_left_div h1 {
+    font-weight: 900;
+}
+
+
+.section_second_button_class {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.section_second_button_class button {
+    margin-left: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: bisque;
+    border: none;
+}
+
+.section_second_button_class input {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.section_second_left_div h1,
+h6 {
+    padding-top: 10px;
+}
+
+.section_second_right_div{
+    width: 500px;
+    height: 410px;
+    background: url(../../assets/img4.png);
+    margin: 100px auto;
+    animation: slide2 15s infinite;
+    border-radius: 10px;
+}
+
+@keyframes slide2 {
+    25% {
+        background: url(../../assets/img5.png);
+    }
+
+    50% {
+        background: url(../../assets/img6.png);
+    }
+}

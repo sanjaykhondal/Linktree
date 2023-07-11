@@ -1,0 +1,128 @@
+.footer_section {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_section_one {
+    text-align: center;
+}
+
+.footer_section_one h1 {
+    font-weight: bolder;
+}
+
+.footer_section_one_button_class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_section_one_button_class button {
+    margin-left: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: rgb(207, 204, 12);
+    border: none;
+}
+
+.footer_section_one_button_class input {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    border: none;
+}
+
+
+.social-link{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+  
+}
+
+.social-link-div2 ul{
+   display: flex;
+}
+
+.social-link-div2 li{
+    list-style-type: none;
+    margin: 5px;
+   
+}
+.social-link-div2 img{
+    height: 20px;
+    object-fit: contain;
+}
+.social-link-div1,.social-link-div2{
+  width: 50%;
+}
+.social-link-div1{
+    display: flex;
+}
+.social-link-div1 button{
+    border: 0px;
+    margin: 10px;
+}
+
+
+.footer_section_two,
+.footer_section_three,
+.footer_section_four {
+    color: black;
+    width: 80%;
+}
+
+.footer_section_one {
+    padding-top: 90px;
+    color: white;
+}
+
+.footer_section_two {
+    background-color: white;
+    border-radius: 5px;
+    margin: 80px 0px 40px 0;
+    text-align: justify;
+}
+
+.social-link-div1 .button2{
+    border-radius: 50px;
+    background-color: yellowgreen;
+}
+.container{
+    padding-left: 70px;
+}
+
+.footer_section_three {
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.footer_section_three img {
+    object-fit: contain;
+}
+
+.footer_section_four{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.flag_class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag_class img {
+    width: 75px;
+    height: 50px;
+    margin: 20px;
+}
+.footer_section_four h6{
+    font-weight: 100;
+}

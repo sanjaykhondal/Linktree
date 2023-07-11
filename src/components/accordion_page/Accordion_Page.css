@@ -1,0 +1,32 @@
+.accordion_main {
+  background-color: rgb(120, 0, 22);
+  text-align: justify;
+  color: rgb(233, 192, 233);
+  padding: 10px;
+}
+
+.accordion_main h2{
+  text-align: center;
+}
+
+.accordion{
+  --bs-accordion-border-color:none;
+  width: 60%;
+  margin-left: 20%;
+ 
+}
+
+.accordion-item {
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 10px;
+  border-radius: 50px;
+  border: 1px solid maroon;
+}
+
+.accordion-button,
+.accordion-body {
+  background-color: rgb(70, 4, 4);
+  color: white;
+  border: 0px;
+}

@@ -1,0 +1,36 @@
+
+.container-fluid{
+    border-radius: 50px;
+    box-shadow: 0px 0px 17px -6px black
+}
+
+   .navbar .navbar-nav .nav-item a{
+    padding: 15px;
+   }
+
+   .navbar .navbar-nav .nav-but{
+    padding: 10px;
+   }
+
+.collapse{
+  justify-content: space-between;
+}
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.btn{
+  border-radius: 50px;
+}
+
+.nav-link{
+  font-weight: bolder;
+  color: black;
+}
+
+.navbar-brand img{
+  padding-left: 10px;
+}
