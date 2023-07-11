@@ -3,7 +3,74 @@ import './Accordion_Page.css';
 
 
 function Accordion_Page() {
+
+    const data = [
+        {
+            id: 1,
+            heading: 'headingOne',
+            collapse: '#collapseOne',
+            question: 'Why do I need a link in bio tool?',
+            answer: 'Right now, every time you’ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios. It’s time-consuming and complicated – making it so much harder to keep everything up to date. A link in bio tool means you never have to compromise, or remove one link from your bio so you can add another. You can keep everything you want to share online in one link. When you’ve got a change, you only ever have to make it once.',
+        },
+        {
+            id: 2,
+            heading: 'headingTwo',
+            collapse: '#collapseTwo',
+            question: 'Is Linktree the original link in bio tool?',
+            answer: 'The short answer? Yes!  Back in 2016, we created Linktree as an easy way to link out to all socials and unify digital ecosystems, pioneering the link-in-bio category. Linktree remains the leading, biggest and most popular link-in-bio solution – but that’s just the beginning.  You can use your Linktree URL or QR code anywhere your audience is, including on your business cards, in your email signature, on paper-based posters and brochures, and even on your resumé. If you don’t have a website, that’s fine. If you have a Linktree, you don’t need one!',
+        },
+        {
+            id: 3,
+            heading: 'headingThree',
+            collapse: '#collapseThree',
+            question: 'Can you get paid and sell things from a Linktree?',
+            answer: 'Yes, you can! We offer plenty of ways to sell products and monetize your audience. You can collect tips, request payments for services, collect revenue from affiliate links, and sell your products right in your Linktree.   A lot of Linktree creators see incredible results with online sales on Linktree, because it removes the extra steps involved in a purchase. With Paypal or Square right in your Linktree, your customers won’t even need to leave your social media to go to another site and pay!  “We love how Linktree has helped us manage our business by having all social media and ways to pay in one location. The QR code has made it easy for customers to access it all!” – Tiffany ',
+        },
+        {
+            id: 4,
+            question: 'Is Linktree safe to use on all of my social media profiles?',
+            answer: 'Linktree is trusted by all social platforms, and is even used on many of Facebook, Instagram and TikTok’s own social media accounts! Because Linktree is the original and most popular link-in-bio tool, the linktr.ee URL is a trusted, identifiable and familiar link that audiences feel comfy and safe clicking on.',
+        },
+        {
+            id: 5,
+            question: 'What makes Linktree better than the other link in bio options?',
+            answer: 'We have our own opinions here, of course, but the stories of the people who use Linktree matter more. Let’s hear what they have to say:    “Four months into creating, someone messaged me like: You need a Linktree. I can’t remember what I was using at the time, but it was one of those ones that were supposed to be easy. Once I got Linktree set up, I was like, oh my god – why did I spend $100 on a website? I don’t need all of that! Now, I can see the monetization of my following becoming a full-time thing.” – David Coleman ”It’s so much easier to set up and have all of your links in one place in a well designed format.” – Catie T  ”Websites are cool (I have one) but Linktrees just make it so much easier.” – Tan Nguyen “I love their analytics. Other link-in-bio companies don’t provide extensive data on what’s going on.” – Riley Lemon   Linktree invented the bio link tool in 2016, and it continues the world’s most popular bio link to this day – with 35M+ people using it as their trusted place to share, sell and grow online. Join them on Linktree today and see for yourself!',
+        },
+        {
+            id: 6,
+            question: 'How can I drive more traffic to and through my Linktree?',
+            answer: 'Sharing your Linktree on every social platform you have makes it easy for your most important content to be seen and engaged with by all of your followers. You can even use QR codes to generate online traffic in offline places, and drive people to your links.  Once visitors arrive on your Linktree, easy-to-understand analytics help you quickly and easily discover where they’re coming from, and what they’re clicking on. You can immediately see what’s working and what’s not and improve your Linktree on the fly with different link placement, prioritized links, subheadings, animation and more to make sure your traffic is landing exactly where you want it!',
+        },
+        {
+            id: 7,
+            question: 'How many links should I have on my Linktree?',
+            answer: 'This depends on two things. If your priority is click-throughs and conversion, we recommend having 3-7 links on your Linktree at once (based on our most successful creators). Including too many options for your visitors slows down their course of action.  That said: for certain creators whose priority is display, education and showcasing (e.g. a record label with a library of new releases to promote, or a management company looking to showcase their full roster of clients), including more than seven links fulfils their purpose perfectly.  You can use features on Linktree to add subheadings, sections, animation and other prioritisation methods to your links – so no matter how many things you’ve got to share, you can drive your visitors to what’s most important, first.  ',
+        },
+        {
+            id: 8,
+            question: 'Do I need a website to use Linktree?',
+            answer: 'No, you don’t! Linktree can act as your very own mini-website to share, sell and grow without any of the time and effort it takes to build and maintain a regular website. You can create a design that fully reflects your personality and brand in seconds, with no knowledge, skills or experience needed. If you already have a website, that’s great: you can add it to your Linktree.  “I hardly touch my website any more. I just send people to my Linktree! It’s a good-looking, fresh interface… so much more dynamic. I can take a few minutes, update my links and put my phone away rather than spending 45 struggling on WordPress.” – @ashleyhopeperez ',
+        },
+        {
+            id: 9,
+            question: 'Where can I download the app?',
+            answer: 'Find it in the App Store, and in the Google Play store!',
+        },
+    ]
+
+    const [selected, setSelected] = useState(null);
+    const [show, setShow] = useState(false)
+    const toggle = (i) => {
+        console.log('id', i)
+        if (selected == i) {
+            return setSelected(null);
+        }
+
+        setSelected(i);
+    }
+
     return (
+
         <div className='accordion_main'>
             <div>
                 <h2>Got questions?</h2>
@@ -11,82 +78,33 @@ function Accordion_Page() {
 
             <div className="accordion" id="accordionExample">
 
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onClick={handleClick}>
-                            Why do I need a link in bio tool?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <p>Right now, every time you’ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios. It’s time-consuming and complicated – making it so much harder to keep everything up to date.</p>
-                            <p>A link in bio tool means you never have to compromise, or remove one link from your bio so you can add another. You can keep everything you want to share online in one link. When you’ve got a change, you only ever have to make it once.</p>
-                        </div>
-                    </div>
-                </div>
+                {
+                    data.map((item, i) => {
 
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                            Is Linktree the original link in bio tool?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" className="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <p>A link in bio tool means you never have to compromise, or remove one link from your bio so you can add another. You can keep everything you want to share online in one link. When you’ve got a change, you only ever have to make it once.</p>
-                            <p>Back in 2016, we created Linktree as an easy way to link out to all socials and unify digital ecosystems, pioneering the link-in-bio category. Linktree remains the leading, biggest and most popular link-in-bio solution – but that’s just the beginning.  You can use your Linktree URL or QR code anywhere your audience is, including on your business cards, in your email signature, on paper-based posters and brochures, and even on your resumé. If you don’t have a website, that’s fine. If you have a Linktree, you don’t need one!</p>
-                        </div>
-                    </div>
-                </div>
+                        return (
+                            <div div className="accordion-item">
+                                <h2 className="accordion-header" id={item.id}>
+                                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={item.collapse} aria-expanded="true" aria-controls={item.collapse} onClick={(() => toggle(item.id))} >
+                                        {item.question}
+                                    </button>
+                                </h2>
+                                {
+                                    selected === item.id ?
+                                        (<div id={item.heading} className="accordion-collapse collapse show" aria-labelledby={item.heading}     data-bs-parent="#accordionExample">
+                                            <div className="accordion-body">
+                                                <p>{item.answer}</p>
+                                            </div>
+                                        </div>)
+                                        :  ''
+                                }
+                            </div>
+                        )
 
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                            Can you get paid and sell things from a Linktree?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" className="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <p>Back in 2016, we created Linktree as an easy way to link out to all socials and unify digital ecosystems, pioneering the link-in-bio category. Linktree remains the leading, biggest and most popular link-in-bio solution – but that’s just the beginning.  You can use your Linktree URL or QR code anywhere your audience is, including on your business cards, in your email signature, on paper-based posters and brochures, and even on your resumé. If you don’t have a website, that’s fine. If you have a Linktree, you don’t need one!</p>
-                            <p>Yes, you can! We offer plenty of ways to sell products and monetize your audience. You can collect tips, request payments for services, collect revenue from affiliate links, and sell your products right in your Linktree.</p>
-                            <p>A lot of Linktree creators see incredible results with online sales on Linktree, because it removes the extra steps involved in a purchase. With Paypal or Square right in your Linktree, your customers won’t even need to leave your social media to go to another site and pay!</p>
-                            <p><strong>“We love how Linktree has helped us manage our business by having all social media and ways to pay in one location. The QR code has made it easy for customers to access it all!” – Tiffany</strong></p>
-                        </div>
-                    </div>
-                </div>
+                    })
 
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                            Is Linktree safe to use on all of my social media profiles?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" className="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <p>Linktree is trusted by all social platforms, and is even used on many of Facebook, Instagram and TikTok’s own social media accounts! Because Linktree is the original and most popular link-in-bio tool, the linktr.ee URL is a trusted, identifiable and familiar link that audiences feel comfy and safe clicking on.</p>
-                        </div>
-                    </div>
-                </div>
+                }
 
-                <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                            What makes Linktree better than the other link in bio options?
-                        </button>
-                    </h2>
-                    <div id="collapseFive" className="accordion-collapse collapse show" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                        <div className="accordion-body">
-                            <p>We have our own opinions here, of course, but the stories of the people who use Linktree matter more. Let’s hear what they have to say:</p>
-                            <p><strong>“Four months into creating, someone messaged me like: You need a Linktree. I can’t remember what I was using at the time, but it was one of those ones that were supposed to be easy. Once I got Linktree set up, I was like, oh my god – why did I spend $100 on a website? I don’t need all of that! Now, I can see the monetization of my following becoming a full-time thing.” – David Coleman</strong></p>
-                            <p><strong>”It’s so much easier to set up and have all of your links in one place in a well designed format.” – Catie T</strong></p>
-                            <p><strong>”Websites are cool (I have one) but Linktrees just make it so much easier.” – Tan Nguyen</strong></p>
-                            <p><strong>“I love their analytics. Other link-in-bio companies don’t provide extensive data on what’s going on.” – Riley Lemon</strong></p>
-                            <p>Linktree invented the bio link tool in 2016, and it continues the world’s most popular bio link to this day – with 35M+ people using it as their trusted place to share, sell and grow online. Join them on Linktree today and see for yourself!</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-
         </div>
     )
 }
